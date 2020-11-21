@@ -7,8 +7,8 @@ help:
 download_bash_environment_manager:
 	@if test ! -d ".tmp/bash-environment-manager-master";then \
 		sudo su -m $(SUDO_USER) -c "mkdir -p .tmp"; \
-		sudo su -m $(SUDO_USER) -c "cd .tmp; wget https://github.com/terminal-labs/bash-environment-manager/archive/master.zip"; \
-		sudo su -m $(SUDO_USER) -c "cd .tmp; unzip master.zip"; \
+		sudo su -m $(SUDO_USER) -c "cd .tmp; wget -O bash-environment-manager.zip https://github.com/terminal-labs/bash-environment-manager/archive/master.zip"; \
+		sudo su -m $(SUDO_USER) -c "cd .tmp; unzip bash-environment-manager.zip"; \
 	fi
 
 vagrant: download_bash_environment_manager
